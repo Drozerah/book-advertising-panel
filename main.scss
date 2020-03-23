@@ -78,6 +78,7 @@ $slide-width: 250px;
     }
     > div{
       transition: transform .4s ease-in-out;
+      // transform: translatex(-$slide-width);
     }
     &:hover{
       > div {
