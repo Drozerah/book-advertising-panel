@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="src/css/main.css">
-    <title>Document</title>
+    <title>Book Panel</title>
 </head>
+
 <body>
-    <h1>Welcome!</h1>
+    <div class="book__panel">
+        <i class="book__panel--close material-icons" title="Fermer">close</i>
+        <h4 class="book__panel__title">Pour en finir<br> avec le chômage !</h4>
+        <div class="book__panel__slider">
+            <div class="book__panel__slider__img">
+                <img src="/src/img/book_1_250x382.jpg" alt="book cover image">
+                <i class="material-icons">play_arrow</i>
+            </div>
+            <div class="book__panel__slider__text">
+                <ul>
+                    <li><span>Broché :</span> 225 pages</li>
+                    <li><span>Auteur :</span> Jean-Christophe Giuliani</li>
+                    <li><span>Parution :</span> 2017</li>
+                    <li><span>Langue :</span> Français</li>
+                    <li><span>Dimensions :</span> 15,2 x 1,3 x 22,9 cm</li>
+                    <li><span>ISBN-10 :</span> 2956073702</li>
+                    <li><span>ISBN-13 :</span> 978-2956073703</li>
+                    <li><span>Prix :</span> 17,41€</li>
+                </ul>
+                <div>Egalement disponible au format éléctronique</div>
+                <ul>
+                    <li><span>Format :</span> Format Kindle</li>
+                    <li><span>Taille du fichier :</span> 6690 KB</li>
+                    <li><span>Prix :</span> 6,44€</li>
+                </ul>
+            </div>
+        </div>
+        <div class="book__panel__action">
+            <a href="/">Achetez ce livre</a>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
