@@ -4,10 +4,16 @@
 $ligth-gray: #717171;
 $slide-width: 250px;
 
+.book__panel--active{
+    transform: translatex(-360px);
+}
 .book__panel{
   width: 290px;
   // background-color: orange;
-  position: relative;
+  position: fixed;
+  bottom:0px;
+  right:-350px;
+  transition: transform .4s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
