@@ -1,6 +1,6 @@
-# book-panel
+# book-advertising-panel
 
-> Work in progress !
+> Show/hide book's advertising panel
 
 ### #TODO
 
