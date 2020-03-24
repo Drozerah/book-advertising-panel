@@ -8,7 +8,8 @@
   },
   "scripts": {
     "babel": "webpack",
-    "build": "node ./bin/build.js"
+    "build": "node ./bin/build.js",
+    "build:example": "cp -r book-panel example"
   },
   "keywords": [],
   "author": "Thomas G. aka Drozerah <drozerah@gmail.com> (https://github.com/Drozerah)",
