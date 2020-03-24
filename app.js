@@ -10,33 +10,33 @@
                 btnTextSecondary: 'Acheter ce livre',
                 author: 'Jean-Christophe Giuliani',
                 language: 'Français',
-                slideSubTitle: 'Egalement disponible au format éléctronique',
-                format: 'Kindle',
-                filePrice: '6,44',
-                bookSize: '15,2 x 1,3 x 22,9 cm', 
+                slideSubTitle1: 'Format papier',
+                slideSubTitle2: 'Format numérique',
+                format: 'ePub',
+                filePrice: '6,99',
+                bookSize: '150×230 mm',
+                editor: 'Les Editions du Net',
                 book1: {
                     slideTitle: 'Pour en finir<br> avec le chômage !',
                     bookTitle: 'En finir avec le chômage : un choix de société !',
+                    bookType: 'economie',
+                    publishDate: '18-12-2019',
+                    pageCount: '396',
+                    isbn10: '978-2-312-07108-4',
+                    price: '24',
                     imgSrc: '/src/img/book_1_250x382.jpg',
-                    publishDate: '2020',
-                    pageCount: '225',
-                    isbn10: '2956073702',
-                    isbn13: '978-2956073703',
-                    price: '17,41',
-                    fileWeigth: '6690',
-                    linkHref:'/'
+                    linkHref:'https://www.leseditionsdunet.com/economie/6657-en-finir-avec-le-chomage-un-choix-de-societe-jean-christophe-giuliani-9782312071084.html'
                 },
                 book2: {
                     slideTitle: 'Pour vous réaliser autrement !',
                     bookTitle: 'Satisfaire nos besoins : un choix de société !',
+                    bookType: 'sciences-humaines',
+                    publishDate: '03-01-2020',
+                    pageCount: '376',
+                    isbn10: '978-2-312-07119-0',
+                    price: '24',
                     imgSrc: '/src/img/book_2_250x382.jpg',
-                    publishDate: '2020',
-                    pageCount: '228',
-                    isbn10: '2956073710',
-                    isbn13: '978-2956073710',
-                    price: '17,41',
-                    fileWeigth: '6690',
-                    linkHref:'/'
+                    linkHref:'https://www.leseditionsdunet.com/sciences-humaines/6671-satisfaire-nos-besoins-un-choix-de-societe-jean-christophe-giuliani-9782312071190.html'
                 }
             }
         }
@@ -58,21 +58,22 @@
                     <i class="material-icons">play_arrow</i>
                 </div>
                 <div class="book__panel__slider__text">
+                    <div>${data.slideSubTitle1}</div>
                     <ul>
-                        <li><span>Broché :</span> ${data[bookId].pageCount} pages</li>
+                        <li><span>Discipline :</span> ${data[bookId].bookType}</li>
+                        <li><span>Brochet :</span> ${data[bookId].pageCount} pages</li>
                         <li><span>Auteur :</span> ${data.author}</li>
                         <li><span>Parution :</span> ${data[bookId].publishDate}</li>
                         <li><span>Langue :</span> ${data.language}</li>
                         <li><span>Dimensions :</span> ${data.bookSize}</li>
-                        <li><span>ISBN-10 :</span> ${data[bookId].isbn10}</li>
-                        <li><span>ISBN-13 :</span> ${data[bookId].isbn13}</li>
-                        <li><span>Prix :</span> ${data[bookId].price}€</li>
+                        <li><span>ISBN :</span> ${data[bookId].isbn10}</li>
+                        <li><span>Editeur :</span> ${data.editor}</li>
+                        <li><span>Prix :</span> ${data[bookId].price} € TTC</li>
                     </ul>
-                    <div>${data.slideSubTitle}</div>
+                    <div>${data.slideSubTitle2}</div>
                     <ul>
-                        <li><span>Format :</span> Format ${data.format}</li>
-                        <li><span>Taille du fichier :</span> ${data[bookId].fileWeigth} KB</li>
-                        <li><span>Prix :</span> ${data.filePrice}€</li>
+                        <li><span>Format :</span> ${data.format}</li>
+                        <li><span>Prix :</span> ${data.filePrice} € TTC</li>
                     </ul>
                 </div>
             </div>
@@ -122,8 +123,8 @@
 
         Init () {
             this.LocalStorage('isBookPannel', true)
-            this.RanderPanel('book1')
-            this.RanderSmallPanel('book1')
+            this.RanderPanel('book2')
+            this.RanderSmallPanel('book2')
             setTimeout(() => {
                 this.IsScroll()
                 this.ClosePanel()
