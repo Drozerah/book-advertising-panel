@@ -1,7 +1,7 @@
 @import "./scss/reset";
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-// colors
 
+// colors
 $gray-darken-1: #212529;
 $gray:#333;
 $gray-lighten-1: #b1b1b1;
@@ -11,22 +11,26 @@ $green: #3e8e41;
 $green-lighten-1: #4CAF50;
 $slide-text-color: $gray-darken-1;
 $slide-background-color: $gray-lighten-3;
-$slide-width: 250px;
 
-.book__panel--active{
-    transform: translatex(-360px);
+// variables
+$slide-width: 250px;
+$smallPanelHeight: 50px;
+
+.book__panel, .book__small__panel{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .book__panel{
   width: 290px;
-  // background-color: orange;
   position: fixed;
   bottom: 0px;
   right: -350px;
-  transition: transform .4s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: transform .4s ease-in-out;
+  &--active{
+    transform: translatex(-360px);
+  }
   &--close{
     color: $gray-lighten-1;
     border: 1px solid $gray-lighten-1;
@@ -93,7 +97,6 @@ $slide-width: 250px;
     }
     > div{
       transition: transform .4s ease-in-out;
-      // transform: translatex(-$slide-width);
     }
     &:hover{
       > div {
@@ -115,9 +118,43 @@ $slide-width: 250px;
       font-size: 16px;
       transition: background-color 300ms ease;
       cursor: pointer;
-        &:hover{
-          background-color: $green;
-        }
+      &:hover{
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.book__small__panel{
+  position: fixed;
+  height: $smallPanelHeight;
+  right:0;
+  bottom: -$smallPanelHeight;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #343a40;
+  font-size: 20px;
+  padding: 5px;
+  transition: transform 300ms ease;
+  &--active{
+    transform: translateY(-$smallPanelHeight);
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    background-color: $green-lighten-1;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    &:hover{
+      background-color: $green;
     }
   }
 }
