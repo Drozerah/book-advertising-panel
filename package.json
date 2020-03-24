@@ -1,7 +1,7 @@
 {
   "name": "book-advertising-panel",
   "version": "1.0.0",
-  "description": "Show/hide book's advertising panel",
+  "description": "Show/hide a book advertising panel",
   "main": "app.js",
   "bin": {
     "book-panel": "prepare.js"

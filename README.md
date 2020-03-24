@@ -1,6 +1,6 @@
 # book-advertising-panel
 
-> Show/hide book's advertising panel
+> Show/hide a book advertising panel
 
 ### #TODO
 
