@@ -1,6 +1,5 @@
 # Ignored folders:
 /node_modules
 # Ignored files:
-*.css
+src/css/*.css
 *.css.map
-book-panel
