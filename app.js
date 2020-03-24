@@ -82,9 +82,7 @@
         IsScroll () {
             window.addEventListener('scroll', () => {
                 this.panel.classList.add('book__panel--active')
-            }, {
-                once: true
-            })
+            }, {once: true})
         }
 
         ClosePanel () {
@@ -92,8 +90,15 @@
                 .querySelector('.book__panel--close')
                 .addEventListener('click', () => {
                     this.panel.classList.remove('book__panel--active')
-                    this.LocalStorage('isBookPannel', false)
+                    this.isClosed()
                 })
+        }
+
+        isClosed () {
+            this.panel
+                .addEventListener('transitionend', () => {
+                    this.LocalStorage('isBookPannel', false)
+                }, {once: true})
         }
 
         Init () {
