@@ -3,33 +3,33 @@
 'use strict'
 
 /**
- * Node Modules 
+ * Node Modules
  */
-const fs = require("fs")
+const fs = require('fs')
 const { execSync } = require('child_process')
 
 /**
- * Tasks 
+ * Tasks
  */
 
 /**
- * Run NPM init 
+ * Run NPM init
  */
 execSync('npm init -y')
-console.log(`'npm init -y' command fired!`)
+console.log('\'npm init -y\' command fired!')
 // working with package.json
 const pkjPath = './package.json'
 // check if package.json has been created
 fs.access(pkjPath, fs.F_OK, (err) => {
   if (err) throw err
   // file exists
-  console.log(`package.json - created!`)
+  console.log('package.json - created!')
 })
 // store package.json as obj
 const json = JSON.parse(fs.readFileSync('package.json', 'utf8'))
 
 /**
- * Create .gitignore file 
+ * Create .gitignore file
  */
 // prepare data
 const gitIgnoreFile = '.gitignore'
@@ -44,7 +44,7 @@ fs.writeFile(gitIgnoreFile, gitIgnoreContent, err => {
   console.log(`${gitIgnoreFile} - created!`)
 })
 /**
- * README.md file 
+ * README.md file
  */
 // prepare data
 const ReadMeFile = 'README.md'
