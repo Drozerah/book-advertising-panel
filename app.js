@@ -80,7 +80,7 @@
             </div>
             `
       div.innerHTML = markup.trim()
-      document.querySelector('body').append(div)
+      document.querySelector('body').appendChild(div)
       this.panel = div
     }
 
@@ -92,7 +92,7 @@
             ${data[bookId].bookTitle}<a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a>
             `
       div.innerHTML = markup.trim()
-      document.querySelector('body').append(div)
+      document.querySelector('body').appendChild(div)
       this.smallPanel = div
     }
 
