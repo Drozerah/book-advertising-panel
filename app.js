@@ -98,10 +98,12 @@
       this.smallPanel = div
     }
 
-    IsScroll () {
-      window.addEventListener('scroll', () => {
-        this.panel.classList.add('book__panel--active')
-      }, { once: true })
+    OnScroll () {
+      const panel = this.panel
+      window.addEventListener('scroll', function cb (event) {
+        panel.classList.add('book__panel--active')
+        event.currentTarget.removeEventListener(event.type, cb)
+      })
     }
 
     ClosePanel () {
@@ -126,7 +128,7 @@
       this.RanderPanel('book2')
       this.RanderSmallPanel('book2')
       setTimeout(() => {
-        this.IsScroll()
+        this.OnScroll()
         this.ClosePanel()
       }, 1)
     }
