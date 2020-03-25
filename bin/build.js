@@ -34,6 +34,19 @@ const newValue = data.replace(new RegExp(/\/\*# sourceMappingURL=main.min.css.ma
 fs.writeFileSync('book-panel/css/main.min.css', newValue, 'utf-8')
 // rename css file
 fs.renameSync('book-panel/css/main.min.css', 'book-panel/css/book-panel.min.css')
+
+// import/copy css file to book-panel folder
+execSync('cp src/css/main.css book-panel/css')
+// rename css file
+fs.renameSync('book-panel/css/main.css', 'book-panel/css/book-panel.css')
+
+// read file
+const data2 = fs.readFileSync('book-panel/css/book-panel.css', 'utf-8')
+// remove string from data /*# sourceMappingURL=main.css.map */
+const newValue2 = data2.replace(new RegExp(/\/\*# sourceMappingURL=main.css.map \*\//), '')
+// write css file with newValue
+fs.writeFileSync('book-panel/css/book-panel.css', newValue2, 'utf-8')
+
 // run babel transpilator
 execSync('npm run babel')
 console.log('build done!')

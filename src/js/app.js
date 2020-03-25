@@ -23,7 +23,7 @@
           pageCount: '396',
           isbn10: '978-2-312-07108-4',
           price: '24',
-          imgSrc: '/src/img/book_1_250x382.jpg',
+          imgSrc: 'img/book_1_250x382.jpg',
           linkHref: 'https://www.leseditionsdunet.com/economie/6657-en-finir-avec-le-chomage-un-choix-de-societe-jean-christophe-giuliani-9782312071084.html'
         },
         book2: {
@@ -34,7 +34,7 @@
           pageCount: '376',
           isbn10: '978-2-312-07119-0',
           price: '24',
-          imgSrc: '/src/img/book_2_250x382.jpg',
+          imgSrc: 'img/book_2_250x382.jpg',
           linkHref: 'https://www.leseditionsdunet.com/sciences-humaines/6671-satisfaire-nos-besoins-un-choix-de-societe-jean-christophe-giuliani-9782312071190.html'
         }
       }

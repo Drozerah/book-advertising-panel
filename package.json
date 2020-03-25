@@ -9,7 +9,7 @@
   "scripts": {
     "babel": "webpack",
     "build": "node ./bin/build.js",
-    "build:example": "cp -r book-panel example",
+    "build:example": "node ./bin/build-example.js",
     "rebuild": "npm run build && npm run build:example"
   },
   "keywords": [],

@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    main: ['@babel/polyfill', './app.js']
+    main: ['@babel/polyfill', './src/js/app.js']
   },
   output: {
     path: path.resolve(__dirname, 'book-panel/js'),
