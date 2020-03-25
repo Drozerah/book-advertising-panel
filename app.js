@@ -3,6 +3,7 @@
     constructor () {
       this.panel = null
       this.smallPanel = null
+      this.pathname = window.document.location.pathname
       this.data = {
         btnText: 'Achetez ce livre',
         btnTextSecondary: 'Acheter ce livre',
@@ -91,11 +92,53 @@
       div.classList.add('book__small__panel')
       div.classList.add('noselect')
       const markup = `
-            ${data[bookId].bookTitle}<a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a>
-            `
+        ${data[bookId].bookTitle}<a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a>
+      `
       div.innerHTML = markup.trim()
       document.querySelector('body').appendChild(div)
       this.smallPanel = div
+    }
+
+    RanderPanels (bookId) {
+      this.RanderPanel(bookId)
+      this.RanderSmallPanel(bookId)
+    }
+
+    RanderPanelsRandom () {
+      const randomNum = Math.random()
+      if (randomNum > 0.5) {
+        this.RanderPanels('book1')
+      } else {
+        this.RanderPanels('book2')
+      }
+    }
+
+    ConditionalPanelsRandering () {
+      switch (true) {
+        case this.pathname.includes('en-finir-avec-le-chomage-un-choix-de-societe') === true:
+          this.RanderPanels('book1')
+          break
+        case this.pathname.includes('satisfaire-nos-besoins-un-choix-de-societe') === true:
+          this.RanderPanels('book2')
+          break
+        case this.pathname.includes('la-croissance-du-pib-menacerait-elle-la-survie-de-humanite') === true:
+          this.RanderPanels('book1')
+          break
+        case this.pathname.includes('les-ideologies-legitimeraient-elles-lordre-social') === true:
+          this.RanderPanelsRandom()
+          break
+        case this.pathname.includes('les-enjeux-du-rapport-au-temps') === true:
+          this.RanderPanelsRandom()
+          break
+        case this.pathname.includes('librairie') === true:
+          break
+        case this.pathname.includes('le-travail-et-la-consommation-les-piliers-de-lordre-social') === true:
+          this.RanderPanels('book2')
+          break
+        default:
+          this.RanderPanelsRandom()
+          break
+      }
     }
 
     OnScroll () {
@@ -125,8 +168,7 @@
 
     Init () {
       this.LocalStorage('isBookPannel', true)
-      this.RanderPanel('book2')
-      this.RanderSmallPanel('book2')
+      this.ConditionalPanelsRandering()
       setTimeout(() => {
         this.OnScroll()
         this.ClosePanel()
