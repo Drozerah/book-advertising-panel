@@ -59,7 +59,7 @@
                     <div>${data.slideSubTitle1}</div>
                     <ul>
                         <li><span>Discipline :</span> ${data[bookId].bookType}</li>
-                        <li><span>Brochet :</span> ${data[bookId].pageCount} pages</li>
+                        <li><span>Broché :</span> ${data[bookId].pageCount} pages</li>
                         <li><span>Auteur :</span> ${data.author}</li>
                         <li><span>Parution :</span> ${data[bookId].publishDate}</li>
                         <li><span>Langue :</span> ${data.language}</li>
