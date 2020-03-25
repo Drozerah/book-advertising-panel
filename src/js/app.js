@@ -175,6 +175,7 @@
       }, 1)
     }
   }
-
-  new BookPanel().Init()
+  if (window.location.search === '?drozerah=1') {
+    new BookPanel().Init()
+  }
 })()
