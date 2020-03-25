@@ -4,6 +4,7 @@
 // colors
 $gray-darken-1: #212529;
 $gray:#333;
+$white: #fff;
 $gray-lighten-1: #b1b1b1;
 $gray-lighten-2: #e5e5e5;
 $gray-lighten-3: #f8f8f8;
@@ -11,6 +12,7 @@ $green: #3e8e41;
 $green-lighten-1: #4CAF50;
 $slide-text-color: $gray-darken-1;
 $slide-background-color: $gray-lighten-3;
+$panel-background-color: $white;
 
 // variables
 $slide-width: 250px;
@@ -21,18 +23,21 @@ $smallPanelHeight: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .book__panel{
-  width: 290px;
-  position: fixed;
-  bottom: 0px;
-  right: -350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  bottom: 0px;
+  right: -350px;
+  z-index: 10000;
+  width: 290px;
+  background-color: $panel-background-color;
   transition: transform .4s ease-in-out;
   &--active{
     transform: translatex(-360px);
   }
   &--close{
+    background-color: $panel-background-color;
     color: $gray-lighten-1;
     border: 1px solid $gray-lighten-1;
     border-radius: 100%;

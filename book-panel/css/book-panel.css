@@ -21,10 +21,6 @@
 }
 
 .book__panel {
-  width: 290px;
-  position: fixed;
-  bottom: 0px;
-  right: -350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +31,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  bottom: 0px;
+  right: -350px;
+  z-index: 10000;
+  width: 290px;
+  background-color: #fff;
   -webkit-transition: -webkit-transform .4s ease-in-out;
   transition: -webkit-transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
@@ -47,6 +49,7 @@
 }
 
 .book__panel--close {
+  background-color: #fff;
   color: #b1b1b1;
   border: 1px solid #b1b1b1;
   border-radius: 100%;

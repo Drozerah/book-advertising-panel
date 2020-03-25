@@ -4,6 +4,8 @@
       this.panel = null
       this.smallPanel = null
       this.pathname = window.document.location.pathname
+      this.origin = window.document.location.origin
+      this.wpPath = '/wp-includes/book-panel/'
       this.data = {
         btnText: 'Achetez ce livre',
         btnTextSecondary: 'Acheter ce livre',
@@ -54,7 +56,7 @@
             <h4 class="book__panel__title">${data[bookId].slideTitle}</h4>
             <div class="book__panel__slider">
                 <div class="book__panel__slider__img">
-                    <img src="${data[bookId].imgSrc}" alt="book cover image">
+                    <img src="${this.origin}${this.wpPath}${data[bookId].imgSrc}" alt="book cover image">
                     <i class="material-icons">play_arrow</i>
                 </div>
                 <div class="book__panel__slider__text">
@@ -175,7 +177,8 @@
       }, 1)
     }
   }
-  if (window.location.search === '?drozerah=1') {
-    new BookPanel().Init()
-  }
+  // if (window.location.search === '?drozerah=1') {
+  //   new BookPanel().Init()
+  // }
+  new BookPanel().Init()
 })()
