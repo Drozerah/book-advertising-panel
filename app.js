@@ -47,6 +47,7 @@
       const data = this.data
       const div = document.createElement('div')
       div.classList.add('book__panel')
+      div.classList.add('noselect')
       const markup = `
             <i class="book__panel--close material-icons" title="Fermer">close</i>
             <h4 class="book__panel__title">${data[bookId].slideTitle}</h4>
@@ -88,6 +89,7 @@
       const data = this.data
       const div = document.createElement('div')
       div.classList.add('book__small__panel')
+      div.classList.add('noselect')
       const markup = `
             ${data[bookId].bookTitle}<a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a>
             `
