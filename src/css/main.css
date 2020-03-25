@@ -56,6 +56,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  width: inherit;
 }
 
 .book__panel__slider {
