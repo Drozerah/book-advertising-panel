@@ -4,9 +4,9 @@
 
 ![image](https://raw.githubusercontent.com/Drozerah/MyGitHubStorage/master/gif/book-panel/book-panel.gif)
 
-### #TODO
+## Demo Deployed Project 
 
-* write a better README.md 
+- [Book Panel App](https://book-panel.firebaseapp.com/)
 
 ## Author
 

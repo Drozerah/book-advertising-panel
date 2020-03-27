@@ -1,4 +1,6 @@
 # Ignored folders:
 /node_modules
+.firebase
 # Ignored files:
+firebase-debug.log
 
