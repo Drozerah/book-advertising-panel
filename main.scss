@@ -12,7 +12,7 @@ $green: #3e8e41;
 $green-lighten-1: #4CAF50;
 $slide-text-color: $gray-darken-1;
 $slide-background-color: $gray-lighten-3;
-$panel-background-color: $white;
+$panel-background-color: rgba(255, 255, 255, 0.85);
 
 // variables
 $slide-width: 250px;
@@ -37,7 +37,7 @@ $smallPanelHeight: 50px;
     transform: translatex(-360px);
   }
   &--close{
-    background-color: $panel-background-color;
+    background-color: $white;
     color: $gray-lighten-1;
     border: 1px solid $gray-lighten-1;
     border-radius: 100%;
@@ -119,7 +119,7 @@ $smallPanelHeight: 50px;
       text-transform: uppercase;
       background-color: $green-lighten-1;
       border: none;
-      color: white;
+      color: $white;
       padding: 10px 15px;
       text-align: center;
       text-decoration: none;
@@ -143,7 +143,7 @@ $smallPanelHeight: 50px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $white;
   background-color: #343a40;
   font-size: 20px;
   padding: 5px;

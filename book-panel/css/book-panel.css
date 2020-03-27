@@ -36,7 +36,7 @@
   right: -350px;
   z-index: 10000;
   width: 290px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   -webkit-transition: -webkit-transform .4s ease-in-out;
   transition: -webkit-transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
@@ -168,7 +168,7 @@
   text-transform: uppercase;
   background-color: #4CAF50;
   border: none;
-  color: white;
+  color: #fff;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
@@ -201,7 +201,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: #fff;
   background-color: #343a40;
   font-size: 20px;
   padding: 5px;
