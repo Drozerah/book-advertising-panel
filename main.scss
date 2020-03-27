@@ -78,7 +78,7 @@ $smallPanelHeight: 50px;
         position: absolute;
         right: 2px;
         bottom: 3px;
-        color: $gray-lighten-1;
+        color: white;
       }
     }
     &__text{
@@ -145,7 +145,7 @@ $smallPanelHeight: 50px;
   justify-content: center;
   align-items: center;
   color: $white;
-  background-color: #343a40;
+  background-color: #333;
   font-size: 20px;
   padding: 5px;
   transition: transform 300ms ease;
