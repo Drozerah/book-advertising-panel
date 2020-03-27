@@ -3,9 +3,6 @@
     constructor () {
       this.panel = null
       this.smallPanel = null
-      this.pathname = window.document.location.pathname
-      this.origin = window.document.location.origin
-      this.wpPath = '/wp-includes/book-panel/'
       this.data = {
         book1: {
           btnText: 'Buy this book',
@@ -22,8 +19,9 @@
           bookTitle: 'Eloquent JavaScript',
           bookType: 'programming',
           publishDate: 'Dec 04, 2018',
-          pageCount: '396',
-          isbn10: '978-1593279509',
+          pageCount: '472',
+          isbn10: '1593279507',
+          isbn13: '978-1593279509',
           price: '30,36',
           imgSrc: 'img/cover.jpg',
           linkHref: 'https://eloquentjavascript.net/'
@@ -57,7 +55,8 @@
                         <li><span>Publish date :</span> ${data[bookId].publishDate}</li>
                         <li><span>Language :</span> ${data[bookId].language}</li>
                         <li><span>Dimensions :</span> ${data[bookId].bookSize}</li>
-                        <li><span>ISBN :</span> ${data[bookId].isbn10}</li>
+                        <li><span>ISBN-10 :</span> ${data[bookId].isbn10}</li>
+                        <li><span>ISBN-13 :</span> ${data[bookId].isbn13}</li>
                         <li><span>Editor :</span> ${data.editor}</li>
                         <li><span>Price:</span> ${data[bookId].price} € TTC</li>
                     </ul>
