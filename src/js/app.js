@@ -56,7 +56,7 @@
             <h4 class="book__panel__title">${data[bookId].slideTitle}</h4>
             <div class="book__panel__slider">
                 <div class="book__panel__slider__img">
-                    <img src="${this.origin}${this.wpPath}${data[bookId].imgSrc}" alt="book cover image">
+                    <img src="${this.origin}${this.wpPath}${data[bookId].imgSrc}" alt="${data[bookId].bookTitle}">
                     <i class="material-icons">play_arrow</i>
                 </div>
                 <div class="book__panel__slider__text">
@@ -94,7 +94,7 @@
       div.classList.add('book__small__panel')
       div.classList.add('noselect')
       const markup = `
-        ${data[bookId].bookTitle}<a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a>
+        <div class="book__small__panel__content"><div>${data[bookId].bookTitle}</div><a href="${data[bookId].linkHref}" target="_blank" rel="noreferrer">${data.btnTextSecondary}</a></div>
       `
       div.innerHTML = markup.trim()
       document.querySelector('body').appendChild(div)

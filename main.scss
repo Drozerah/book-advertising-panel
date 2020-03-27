@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './scss/utils';
+@import './scss/responsive';
 
 // colors
 $gray-darken-1: #212529;
@@ -148,21 +149,48 @@ $smallPanelHeight: 50px;
   font-size: 20px;
   padding: 5px;
   transition: transform 300ms ease;
+  &__content{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    a{
+      text-decoration: none;
+      color: inherit;
+      text-transform: uppercase;
+      background-color: $green-lighten-1;
+      font-size: 16px;
+      padding: 5px 15px;
+      margin-left: 20px;
+      transition: background-color 300ms ease;
+      cursor: pointer;
+      &:hover{
+        background-color: $green;
+      }
+    }
+  }
   &--active{
     transform: translateY(-$smallPanelHeight);
   }
-  a{
-    text-decoration: none;
-    color: inherit;
-    text-transform: uppercase;
-    background-color: $green-lighten-1;
-    font-size: 16px;
-    padding: 5px 15px;
-    margin-left: 20px;
-    transition: background-color 300ms ease;
-    cursor: pointer;
-    &:hover{
-      background-color: $green;
+  @media #{$small-and-down} {
+    // styles for small screens and down
+    $smallPanelHeight: 120px;
+    height: $smallPanelHeight;
+    bottom: -$smallPanelHeight;
+    &__content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      div{
+        text-align: center;
+      }
+      a{
+        margin: 10px 0 0 0;
+      }
+    }
+    &--active{
+      transform: translateY(-$smallPanelHeight);
     }
   }
 }
