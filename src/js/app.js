@@ -39,7 +39,7 @@
       div.classList.add('book__panel')
       div.classList.add('noselect')
       const markup = `
-            <i class="book__panel--close material-icons" title="Fermer">close</i>
+            <i class="book__panel--close material-icons" title="Close">close</i>
             <h4 class="book__panel__title">${data[bookId].slideTitle}</h4>
             <div class="book__panel__slider">
                 <div class="book__panel__slider__img">
